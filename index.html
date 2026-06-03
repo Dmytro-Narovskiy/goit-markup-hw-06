@@ -146,13 +146,19 @@
       <section class="section-team" id="team">
         <div class="container">
           <h2 class="team-heading">Our Team</h2>
+
           <ul class="team-list">
             <!-- MARK GUERRERO -->
             <li class="team-item">
               <img
-                src="./images/our-team/mark-guerrero.jpg"
+                srcset="
+                  ./images/our-team/mark-guerrero@1x.jpg 1x,
+                  ./images/our-team/mark-guerrero@2x.jpg 2x
+                "
+                src="./images/our-team/mark-guerrero@1x.jpg"
                 alt="Mark Guerrero"
                 width="264"
+                height="260"
               />
               <div class="team-card">
                 <h3 class="team-title">Mark Guerrero</h3>
@@ -206,9 +212,14 @@
             <!-- TOM FORD -->
             <li class="team-item">
               <img
-                src="./images/our-team/tom-ford.jpg"
+                srcset="
+                  ./images/our-team/tom-ford@1x.jpg 1x,
+                  ./images/our-team/tom-ford@2x.jpg 2x
+                "
+                src="./images/our-team/tom-ford@1x.jpg"
                 alt="Tom Ford"
                 width="264"
+                height="260"
               />
               <div class="team-card">
                 <h3 class="team-title">Tom Ford</h3>
@@ -258,9 +269,14 @@
             <!-- CAMILA GARCIA -->
             <li class="team-item">
               <img
-                src="./images/our-team/camila-garcia.jpg"
+                srcset="
+                  ./images/our-team/camila-garcia@1x.jpg 1x,
+                  ./images/our-team/camila-garcia@2x.jpg 2x
+                "
+                src="./images/our-team/camila-garcia@1x.jpg"
                 alt="Camila Garcia"
                 width="264"
+                height="260"
               />
               <div class="team-card">
                 <h3 class="team-title">Camila Garcia</h3>
@@ -310,9 +326,14 @@
             <!-- DANIEL WILSON -->
             <li class="team-item">
               <img
-                src="./images/our-team/daniel-wilson.jpg"
+                srcset="
+                  ./images/our-team/daniel-wilson@1x.jpg 1x,
+                  ./images/our-team/daniel-wilson@2x.jpg 2x
+                "
+                src="./images/our-team/daniel-wilson@1x.jpg"
                 alt="Daniel Wilson"
                 width="264"
+                height="260"
               />
               <div class="team-card">
                 <h3 class="team-title">Daniel Wilson</h3>
@@ -372,7 +393,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/banking-app.jpg"
+                  srcset="
+                    ./images/portfolio/banking-app@1x.jpg 1x,
+                    ./images/portfolio/banking-app@2x.jpg 2x
+                  "
+                  src="./images/portfolio/banking-app@1x.jpg"
                   alt="Banking App"
                   width="360"
                 />
@@ -392,7 +417,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/cashless-payment.jpg"
+                  srcset="
+                    ./images/portfolio/cashless-payment@1x.jpg 1x,
+                    ./images/portfolio/cashless-payment@2x.jpg 2x
+                  "
+                  src="./images/portfolio/cashless-payment@1x.jpg"
                   alt="Cashless Payment"
                   width="360"
                 />
@@ -412,7 +441,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/meditation-app.jpg"
+                  srcset="
+                    ./images/portfolio/meditation-app@1x.jpg 1x,
+                    ./images/portfolio/meditation-app@2x.jpg 2x
+                  "
+                  src="./images/portfolio/meditation-app@1x.jpg"
                   alt="Meditation App"
                   width="360"
                 />
@@ -432,7 +465,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/taxi-service.jpg"
+                  srcset="
+                    ./images/portfolio/taxi-service@1x.jpg 1x,
+                    ./images/portfolio/taxi-service@2x.jpg 2x
+                  "
+                  src="./images/portfolio/taxi-service@1x.jpg"
                   alt="Taxi Service"
                   width="360"
                 />
@@ -452,7 +489,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/screen-illustrations.jpg"
+                  srcset="
+                    ./images/portfolio/screen-illustrations@1x.jpg 1x,
+                    ./images/portfolio/screen-illustrations@2x.jpg 2x
+                  "
+                  src="./images/portfolio/screen-illustrations@1x.jpg"
                   alt="Screen Illustrations"
                   width="360"
                 />
@@ -472,7 +513,11 @@
             <li class="portfolio-item">
               <div class="portfolio-list-item-text">
                 <img
-                  src="./images/portfolio/online-courses.jpg"
+                  srcset="
+                    ./images/portfolio/online-courses@1x.jpg 1x,
+                    ./images/portfolio/online-courses@2x.jpg 2x
+                  "
+                  src="./images/portfolio/online-courses@1x.jpg"
                   alt="Online Courses"
                   width="360"
                 />
@@ -582,7 +627,8 @@
 
     <!-- #endregion footer -->
 
-    <div class="backdrop is-open" id="modal">
+    <!-- #region backdrop-modal -->
+    <div class="backdrop sr-only" id="modal">
       <div class="modal">
         <button class="close-popup" type="button">
           <svg class="close-popup-icon" width="8" height="8">
@@ -675,5 +721,11 @@
         </form>
       </div>
     </div>
+
+    <!-- #endregion backdrop-modal -->
+
+    <!-- #region burger-menu -->
+
+    <!-- #endregion burger-menu -->
   </body>
 </html>
