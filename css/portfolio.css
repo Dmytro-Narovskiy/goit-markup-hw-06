@@ -19,8 +19,8 @@
 
 .portfolio-item {
   transition:
-    box-shadow 250ms,
-    box-shadow 250ms;
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -65,7 +65,7 @@
   color: var(--cloud);
   transform: translateY(100%);
   padding: 40px 32px;
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* #endregion Mobile-First */

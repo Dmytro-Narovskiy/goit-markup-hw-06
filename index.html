@@ -24,7 +24,7 @@
   <body>
     <!-- #region header -->
 
-    <header class="main-header sr-only" id="header">
+    <header class="main-header" id="header">
       <div class="container header-container">
         <a class="header-logo" href="./index.html">
           <span class="color-accent">Web</span><span>Studio</span></a
@@ -60,6 +60,11 @@
             </li>
           </ul>
         </address>
+        <button class="burger-menu-header" type="button" data-menu-open>
+          <svg class="burger-menu-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -71,7 +76,9 @@
       <section class="section-hero" id="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -627,10 +634,90 @@
 
     <!-- #endregion footer -->
 
+    <!-- #region mobile-burger-menu -->
+
+    <div class="mobile-menu" data-menu>
+      <button class="burger-menu-close-btn" type="button" data-menu-close>
+        <svg class="burger-close-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <nav class="burger-nav">
+        <ul class="burger-nav-list">
+          <li class="burger-nav-item">
+            <a class="burger-nav-link active-link-mobile-menu" href="">
+              Studio
+            </a>
+          </li>
+
+          <li class="burger-nav-item">
+            <a class="burger-nav-link" href=""> Portfolio</a>
+          </li>
+
+          <li class="burger-nav-item">
+            <a class="burger-nav-link" href=""> Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <address class="burger-nav-address">
+        <ul class="burger-nav-address-list">
+          <li class="burger-nav-address-item">
+            <a class="burger-address-tel" href="tel:+110001111111">
+              +11 (000) 111-11-11
+            </a>
+          </li>
+
+          <li class="burger-nav-address-item">
+            <a class="burger-address-email" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+      </address>
+      <ul class="burger-social-list">
+        <li class="burger-social-item">
+          <a class="burger-social-link" href="https://www.instagram.com/">
+            <svg class="burger-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="burger-social-item">
+          <a class="burger-social-link" href="https://x.com/">
+            <svg class="burger-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="burger-social-item">
+          <a class="burger-social-link" href="https://www.facebook.com/">
+            <svg class="burger-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="burger-social-item">
+          <a class="burger-social-link" href="https://www.linkedin.com/">
+            <svg class="burger-social-icons" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- #endregion mobile-burger-menu -->
+
     <!-- #region backdrop-modal -->
-    <div class="backdrop sr-only" id="modal">
+
+    <div class="backdrop" id="modal" data-modal>
       <div class="modal">
-        <button class="close-popup" type="button">
+        <button class="close-popup" type="button" data-modal-close>
           <svg class="close-popup-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -724,8 +811,7 @@
 
     <!-- #endregion backdrop-modal -->
 
-    <!-- #region burger-menu -->
-
-    <!-- #endregion burger-menu -->
+    <script src="./js/burger-menu.js"></script>
+    <script src="./js/modal-menu.js"></script>
   </body>
 </html>

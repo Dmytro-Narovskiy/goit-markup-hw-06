@@ -31,10 +31,20 @@
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--dairy);
   border-radius: 4px;
-  width: 408px;
-  height: 80%;
-  max-height: 584px;
-  padding: 72px 24px 24px 24px;
+
+  width: 288px;
+  min-height: 623px;
+
+  padding: 72px 16px 24px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    height: 80%;
+    max-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 
 .close-popup {
@@ -218,7 +228,9 @@
 }
 
 .privacy-link {
-  line-height: 1.17;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--iris);

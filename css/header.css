@@ -1,3 +1,4 @@
+/* #region Mobile-First */
 .main-header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow:
@@ -6,18 +7,17 @@
     0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
-.header-logo {
-  margin-right: 76px;
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .header-nav {
-  flex-grow: 1;
+  display: none;
 }
 
 .header-nav-list {
@@ -39,7 +39,7 @@
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-  transition: color 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-active-link {
@@ -59,8 +59,7 @@
 }
 
 .header-address-list {
-  display: flex;
-  column-gap: 40px;
+  display: none;
 }
 
 .header-address-email {
@@ -69,7 +68,7 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
-  transition: color 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-email:hover,
@@ -83,10 +82,62 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
-  transition: color 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-tel:hover,
 .header-address-tel:focus {
   color: var(--ocean);
 }
+
+.burger-menu-header {
+  background-color: var(--white);
+  border: none;
+}
+
+/* #endregion Mobile-First */
+
+/* #region Tablet-Styles */
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 0 24px;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .burger-menu-header {
+    display: none;
+  }
+}
+
+/* #endregion Tablet-Styles */
+
+/* #region Desktop-Styles */
+
+@media screen and (min-width: 1158px) {
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .header-nav {
+    display: block;
+    flex-grow: 1;
+  }
+
+  .header-address-list {
+    flex-direction: row;
+    column-gap: 40px;
+  }
+}
+
+/* #endregion Desktop-Styles */
