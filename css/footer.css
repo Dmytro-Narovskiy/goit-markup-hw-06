@@ -88,22 +88,26 @@
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-form {
   display: flex;
   flex-direction: column;
-  width: 165px;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-label {
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .footer-email-input {
   padding-left: 16px;
 
-  width: 288px;
+  width: 100%;
+  max-width: 288px;
   height: 40px;
 
   border: 1px solid var(--white);
@@ -136,7 +140,7 @@
   min-width: 165px;
   height: 40px;
 
-  margin-left: 61px;
+  margin-left: 0;
 
   font-size: 16px;
   font-weight: 500;
@@ -168,46 +172,49 @@
 /* #region Tablet-Styles */
 
 @media screen and (min-width: 768px) {
-  @media screen and (min-width: 768px) {
-    .footer-container {
-      flex-wrap: wrap;
-      flex-direction: row;
-      column-gap: 24px;
-      row-gap: 72px;
+  .footer-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 72px;
+    width: 584px;
+    margin: 0 auto;
+  }
 
-      width: 584px;
-      margin: 0 auto;
-    }
+  .footer-container-left {
+    text-align: left;
+  }
 
-    .footer-container-left {
-      text-align: left;
-      margin-left: 0;
-    }
+  .footer-container-right {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
-    .footer-container-right {
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
+  .footer-subscribe-wrap {
+    align-items: flex-start;
+  }
 
-    .footer-subscribe-wrap {
-      margin-left: 0;
-    }
+  .footer-subscribe-title {
+    text-align: left;
+  }
 
-    .footer-subscribe-title {
-      text-align: left;
-    }
+  .footer-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
-    .footer-form {
-      flex-direction: row;
-    }
+  .footer-label {
+    margin-bottom: 0;
+    width: auto;
+  }
 
-    .footer-email-input {
-      width: 264px;
-    }
+  .footer-email-input {
+    width: 264px;
+    max-width: none;
+  }
 
-    .footer-btns-subscribe {
-      margin-left: 24px;
-    }
+  .footer-btns-subscribe {
+    margin-left: 24px;
   }
 }
 
@@ -221,18 +228,21 @@
   }
 
   .footer-container {
-    display: flex;
-    justify-content: flex-start;
-    gap: unset;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    width: auto;
+    max-width: 1158px;
+    column-gap: 0;
+    row-gap: 0;
+    margin: 0 auto;
   }
 
   .footer-container-left {
-    margin-left: 0;
     margin-right: 120px;
   }
 
   .footer-subscribe-wrap {
-    margin-left: 83px;
+    margin-left: auto;
   }
 }
 /* #endregion Desktop-Styles */
